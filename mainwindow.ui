@@ -33,17 +33,17 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>70</x>
       <y>40</y>
-      <width>481</width>
+      <width>501</width>
       <height>291</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">justify-self: center;</string>
+     <string notr="true"/>
     </property>
     <property name="title">
-     <string>GroupBox</string>
+     <string/>
     </property>
     <widget class="QPushButton" name="pushButtonLogin">
      <property name="geometry">
@@ -55,13 +55,13 @@
       </rect>
      </property>
      <property name="text">
-      <string>Login</string>
+      <string>Zaloguj</string>
      </property>
     </widget>
     <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>10</x>
        <y>90</y>
        <width>481</width>
        <height>72</height>
@@ -128,9 +128,9 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>230</x>
       <y>10</y>
-      <width>261</width>
+      <width>171</width>
       <height>20</height>
      </rect>
     </property>
@@ -142,7 +142,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">margin: auto;</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Twój Terminarz</string>

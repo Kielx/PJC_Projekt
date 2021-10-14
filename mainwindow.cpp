@@ -33,13 +33,6 @@ struct User {
     }
 };
 
-//User User1 ("Andrzej", "123", QVector<Todo>());
-//User User2 ("Michał", "456", QVector<Todo>());
-//User User3 ("Paweł", "789", QVector<Todo>());
-//QList<User> usersList;
-
-
-
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -57,8 +50,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QDateTime dt = QDateTime::fromString("1.30.1", "M.d.s");
-    Todo newTodo("Dentysta", dt, false);
+    //QDateTime dt = QDateTime::fromString("1.30.1", "M.d.s");
+    //Todo newTodo("Dentysta", dt, false);
     //User1.todolist.append(newTodo);
     //ui->pushButton->setText(User1.todolist[0].name);
 }
@@ -83,7 +76,7 @@ void MainWindow::on_pushButtonLogin_clicked()
     QString username = ui->lineEditUsername->text();
     QString password = ui->lineEditPassword->text();
     User checkUser (username, password, QVector<Todo>());
-    print(usersList);
+    //print(usersList);
 
     auto userExists = std::find_if(
       usersList.begin(), usersList.end(),
@@ -93,14 +86,14 @@ void MainWindow::on_pushButtonLogin_clicked()
     {
       // object was found, use *itObj (or itObj->) to access it/its members
         //znaleziono użytkownika, użyj *userExists lub userExists-> by dostać się do jego metod
-        qDebug() << "found";
-        QMessageBox::information(this, "Login", "Username and password correct");
-
+        //QMessageBox::information(this, "Login", "Correct");
+        hide();
+        loggedIn = new LoggedIn(this);
+        loggedIn->show();
     }
     else
     {
-      qDebug() << "not found";
-      QMessageBox::warning(this, "Login", "Username and password is not correct");
+      QMessageBox::warning(this, "Login", "Podano błędne dane logowania");
     }
 
 }
