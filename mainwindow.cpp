@@ -7,6 +7,7 @@
 #include "QVector"
 #include "QMessageBox"
 #include "QDebug"
+#include <QScreen>
 
 using namespace std;
 
@@ -40,13 +41,14 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("Zaloguj się");
-
+    move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center());
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 
 
 void MainWindow::on_pushButton_clicked()
