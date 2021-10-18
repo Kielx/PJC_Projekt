@@ -11,29 +11,7 @@
 
 using namespace std;
 
-struct Todo {
-    QString name;
-    QDateTime datetime;
-    bool status;
-    Todo (QString _name, QDateTime _datetime, bool _status){
-        name = _name;
-        datetime = _datetime;
-        status = _status;
-    }
-
-};
-
-struct User {
-    QString name;
-    QString password;
-    QVector<Todo> todolist;
-    User (QString _name, QString _password, QVector<Todo> _todolist){
-        name = _name;
-        password = _password;
-        todolist = _todolist;
-    }
-};
-
+QList<User> usersList;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -73,7 +51,7 @@ void MainWindow::on_pushButtonLogin_clicked()
     User User1 ("Andrzej", "123", QVector<Todo>());
     User User2 ("Michał", "456", QVector<Todo>());
     User User3 ("Paweł", "789", QVector<Todo>());
-    QList<User> usersList;
+
     usersList << User1 << User2 << User3;
 
     QString username = ui->lineEditUsername->text();
