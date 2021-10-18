@@ -51,13 +51,13 @@ MainWindow::~MainWindow()
 
 
 
-void MainWindow::on_pushButton_clicked()
-{
+//void MainWindow::on_pushButton_clicked()
+//{
     //QDateTime dt = QDateTime::fromString("1.30.1", "M.d.s");
     //Todo newTodo("Dentysta", dt, false);
     //User1.todolist.append(newTodo);
     //ui->pushButton->setText(User1.todolist[0].name);
-}
+//}
 
 void print(QList<User> list)
 {
@@ -99,5 +99,12 @@ void MainWindow::on_pushButtonLogin_clicked()
       QMessageBox::warning(this, "Login", "Podano błędne dane logowania");
     }
 
+}
+
+
+void MainWindow::on_actionDodaj_u_ytkownika_triggered()
+{
+    addUser = new AddUser(this);
+    addUser->show();
 }
 
